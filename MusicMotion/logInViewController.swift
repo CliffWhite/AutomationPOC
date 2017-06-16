@@ -123,6 +123,7 @@ class LogInViewController: UIViewController {
                         DispatchQueue.main.async(execute: self.LoginDone)
                     }
                     
+                    
                 }
             }
             
@@ -142,6 +143,8 @@ class LogInViewController: UIViewController {
         login_button.isEnabled = true
         
         login_button.setTitle("Logout", for: .normal)
+        self.username_input.text = ""
+        self.password_input.text = ""
     }
     
     func LoginToDo()
