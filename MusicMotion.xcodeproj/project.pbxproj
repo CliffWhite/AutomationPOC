@@ -17,6 +17,7 @@
 		521B3CD31B100E9100A0C56A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521B3CC01B0FEFE600A0C56A /* Main.storyboard */; };
 		5249711C1B10380400ED19C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5249711B1B10380400ED19C7 /* Images.xcassets */; };
 		52B86B001B0FE99F00F341D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B86AFF1B0FE99F00F341D0 /* AppDelegate.swift */; };
+		913406BB1EF362F400AD8260 /* logInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913406BA1EF362F400AD8260 /* logInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		529074F11B143E2E0085CFF8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52B86AFF1B0FE99F00F341D0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MusicMotion/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		52B86B181B0FEAB700F341D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MusicMotion/Info.plist; sourceTree = SOURCE_ROOT; };
+		913406BA1EF362F400AD8260 /* logInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			children = (
 				521B3CC51B100B8C00A0C56A /* HistoryViewController.swift */,
 				521B3CC91B100B8C00A0C56A /* SongViewController.swift */,
+				913406BA1EF362F400AD8260 /* logInViewController.swift */,
 			);
 			name = "View Controller Classes";
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				521B3CCB1B100B8C00A0C56A /* HistoryViewController.swift in Sources */,
 				521B3CCA1B100B8C00A0C56A /* Activity.swift in Sources */,
 				52B86B001B0FE99F00F341D0 /* AppDelegate.swift in Sources */,
+				913406BB1EF362F400AD8260 /* logInViewController.swift in Sources */,
 				521B3CCC1B100B8C00A0C56A /* MotionManager.swift in Sources */,
 				521B3CCD1B100B8C00A0C56A /* Song.swift in Sources */,
 				521B3CCF1B100B8C00A0C56A /* SongViewController.swift in Sources */,

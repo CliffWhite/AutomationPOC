@@ -131,6 +131,6 @@ struct Activity: CustomDebugStringConvertible {
     // MARK: CustomDebugStringConvertible
 
     var debugDescription: String {
-        return "ActivityType: \(activityType), StartDate: \(startDate), EndDate: \(endDate), TimeInterval: \(timeInterval), Steps: \(String(describing: numberOfSteps)), Distance: \(String(describing: distance)), FloorsAscended: \(floorsAscended), FloorsDescended: \(floorsDescended) "
+        return "ActivityType: \(activityType), StartDate: \(startDate), EndDate: \(endDate), TimeInterval: \(timeInterval), Steps: \(String(describing: numberOfSteps)), Distance: \(String(describing: distance)), FloorsAscended: \(String(describing: floorsAscended)), FloorsDescended: \(String(describing: floorsDescended)) "
     }
 }
