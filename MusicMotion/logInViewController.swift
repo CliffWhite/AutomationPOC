@@ -40,14 +40,20 @@ class LogInViewController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToTabBarController"
+        {
+            print(#function)
+            print()
+        }
     }
     
     
     @IBAction func DoLogin(_ sender: AnyObject) {
         //        print(#function)
+        
+        
         if ( login_button.titleLabel?.text == "Logout")
         {
             let preferences = UserDefaults.standard
@@ -145,6 +151,10 @@ class LogInViewController: UIViewController {
         login_button.setTitle("Logout", for: .normal)
         self.username_input.text = ""
         self.password_input.text = ""
+        //TODO: make a segue programmatically
+         performSegue(withIdentifier: "GoToTabBarController", sender: nil)
+        
+        
     }
     
     func LoginToDo()

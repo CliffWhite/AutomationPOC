@@ -182,6 +182,7 @@
                         <outlet property="login_button" destination="qT3-Fv-MBt" id="7o8-zU-o2P"/>
                         <outlet property="password_input" destination="JfB-LO-AuQ" id="aLs-tF-g6O"/>
                         <outlet property="username_input" destination="HBc-oo-bsv" id="pj7-eO-6dG"/>
+                        <segue destination="LbN-Qg-Szz" kind="show" identifier="GoToTabBarController" id="WIu-LQ-5iH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5U-wb-0Xx" userLabel="First Responder" sceneMemberID="firstResponder"/>
