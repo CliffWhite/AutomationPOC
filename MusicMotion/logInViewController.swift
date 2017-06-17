@@ -41,13 +41,13 @@ class LogInViewController: UIViewController {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToTabBarController"
-        {
-            print(#function)
-            print()
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "GoToTabBarController"
+//        {
+//            print(#function)
+//            print()
+//        }
+//    }
     
     
     @IBAction func DoLogin(_ sender: AnyObject) {
@@ -151,7 +151,6 @@ class LogInViewController: UIViewController {
         login_button.setTitle("Logout", for: .normal)
         self.username_input.text = ""
         self.password_input.text = ""
-        //TODO: make a segue programmatically
          performSegue(withIdentifier: "GoToTabBarController", sender: nil)
         
         
