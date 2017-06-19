@@ -9,8 +9,10 @@
 import XCTest
 
 class ProfileTests: BaseTestCase {
+    
       let p = ProfileActivity()
     let  l = LogIn()
+    let profileText = "This is Cliff and Allison from Austin, Tx. Currently we are outside on the deck since there is apparently a gas leak in our house."
     
     override func setUp() {
         super.setUp()
@@ -22,28 +24,32 @@ class ProfileTests: BaseTestCase {
             // login
             if l.loginButton.exists {
                 l.logIn(user: TestData.GOODUSER1, password: TestData.GOODPASSWORD1)
+                // wait
+                self.waitForElementToAppear(element: p.profileButton, timeout: 10)
+                p.chooseProfileTab()
             }
         }
     }
     
     
-    func testVerifyContent() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        
-        print()
+    func testVerifyContentOfProfile() {
+        XCTAssert(p.textOfProfileText() == profileText)
     }
     
     func testLogoutWorks() {
-        let app = XCUIApplication()
-        app.tabBars.buttons["About Me"].tap()
         app.buttons["Logout"].tap()
         XCTAssert(app.textFields["user name"].exists) //TODO: verify that 'exists' means what I think
-        
     }
     
     func testCanChangeProfileText() {
+        let newProfileText = "I've said too much; tell me more about you!"
+        p.setTextOfProfile(newProfileText)
+        
+        //TODO: We'd want to relaunch the app and make sure the new text persisted; let's pretend for now.
+        //TODO: Quit the app and relaunch (or just sniff the network for the write)
+        //TODO: Verify the new text is there
+        XCTAssert(p.textOfProfileText() == newProfileText)
+        
         
     }
     

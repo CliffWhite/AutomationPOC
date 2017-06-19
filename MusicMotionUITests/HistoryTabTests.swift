@@ -35,7 +35,7 @@ class HistoryTabTests: BaseTestCase {
             h.interactWithAlert(allow: true)
         }
         // Do some stuff; I suspect it works on the real phone but simulator can't access motion kit
-        XCTAssertNotNil(nil) // since no tests let's assume this is TDD and we don't have code yet
+        XCTAssertNotNil(nil) //FIXME: since no tests let's assume this is TDD and we don't have code yet
         
         
         

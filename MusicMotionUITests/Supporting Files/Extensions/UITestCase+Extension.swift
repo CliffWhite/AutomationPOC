@@ -10,6 +10,7 @@ import Foundation
 import XCTest
 
 extension XCTestCase {
+    
     func waitForElementToAppear(element: XCUIElement, timeout: Int, file: String = #file, line: UInt = #line) {
         let existsPredicate = NSPredicate(format: "exists == true")
         expectation(for: existsPredicate, evaluatedWith: element, handler: nil)

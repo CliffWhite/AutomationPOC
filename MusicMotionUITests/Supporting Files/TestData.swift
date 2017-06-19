@@ -12,4 +12,7 @@ struct TestData {
     static let GOODUSER1 = "try@me.com"
     static let GOODPASSWORD1 = "test"
     
+    static let BADUSER1 = "t@me.com"
+    static let BADPASSWORD1 = "tes"
+    
 }
