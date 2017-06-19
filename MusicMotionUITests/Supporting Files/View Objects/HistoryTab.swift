@@ -12,7 +12,7 @@ import XCTest
 class HistoryTab : BaseViewObject{
     let app = XCUIApplication()
     let historyButton = XCUIApplication().tabBars.buttons["History"]
-//    let alert = XCUIApplication().alerts["“MusicMotion” Would Like to Access Your Motion & Fitness Activity"]
+    let alert = XCUIApplication().alerts["“MusicMotion” Would Like to Access Your Motion & Fitness Activity"]
     
     
     func chooseHistoryTab() {
@@ -30,9 +30,7 @@ class HistoryTab : BaseViewObject{
     }
     
     func alertExists() -> Bool {
-        
-        return true
-        //return alert.exists
+        return XCUIApplication().alerts["“MusicMotion” Would Like to Access Your Motion & Fitness Activity"].buttons["OK"].exists
     }
     
 }

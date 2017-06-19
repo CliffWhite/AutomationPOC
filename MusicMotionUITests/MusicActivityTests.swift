@@ -42,7 +42,6 @@ class MusicActivityTests: BaseTestCase {
         searchStrings.append(targetString2)
         searchStrings.append(targetString3)
         
-        
         for target in searchStrings {
             // Assert each exists
             XCTAssertNotNil(self.findStaticTextByString(target["label"]!))
@@ -51,12 +50,6 @@ class MusicActivityTests: BaseTestCase {
             //TODO: Figure out how to find which image is displayed and assert on it
             //
         }
-        
-        
-        print(app.debugDescription)
-        print()
-        
-        
     }
     
 }

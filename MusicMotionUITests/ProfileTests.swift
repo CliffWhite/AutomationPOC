@@ -38,7 +38,9 @@ class ProfileTests: BaseTestCase {
     
     func testLogoutWorks() {
         app.buttons["Logout"].tap()
-        XCTAssert(app.textFields["user name"].exists) //TODO: verify that 'exists' means what I think
+        self.waitForElementToAppear(element: l.userNameTextField, timeout: 5)
+        XCTAssert(l.userNameTextField.exists) //TODO: verify that 'exists' means what I think
+        
     }
     
     func testCanChangeProfileText() {

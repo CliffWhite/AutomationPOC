@@ -1,3 +1,4 @@
+
 //
 //  HistoryTabTests.swift
 //  MusicMotionUITests
@@ -30,16 +31,21 @@ class HistoryTabTests: BaseTestCase {
        
         // Make sure we're on the tab
         h.chooseHistoryTab()
+        
+        
         sleep(1)
+        //TODO:  alerts have given me a lot of trouble; I think the problem is I'd need to succesffuly give an accessiblity ID (I tried) - maybe it needs a label as well?
         if h.alertExists() {
             h.interactWithAlert(allow: true)
         }
         // Do some stuff; I suspect it works on the real phone but simulator can't access motion kit
-        XCTAssertNotNil(nil) //FIXME: since no tests let's assume this is TDD and we don't have code yet
+        XCTAssertFalse(h.alertExists())
+         //FIXME: since no tests let's assume this is TDD and we don't have code yet
         
         
         
     }
+    
     
     
 }

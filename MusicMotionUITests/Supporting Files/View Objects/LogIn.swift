@@ -26,8 +26,9 @@ class LogIn : BaseViewObject{
     }
     
     func clearCredentials() {
+        //FIXME: why is this not removing UserDefaults key?!!!!!!!!!!
         let preferences = UserDefaults.standard
-//        preferences.removeObject(forKey: "session")
+        preferences.removeObject(forKey: "session")
         print(UserDefaults.standard.synchronize())
         print("\n--------> \(#function), session exists after synchronize?: \(String(describing: preferences.object(forKey: "session"))) ")
         UserDefaults.resetStandardUserDefaults()
@@ -42,7 +43,7 @@ class LogIn : BaseViewObject{
     }
     
 //    func delay(_ delay:Int64) {
-//        sleep(4)
+//        sleep(delay)
 //    }
     
     

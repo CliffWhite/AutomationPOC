@@ -115,6 +115,9 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let message = NSLocalizedString("To enable Motion features, please allow access to Motion & Fitness in Settings under Privacy.", comment: "")
 
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.accessibilityValue = "StupidAlert"
+        
+        
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
