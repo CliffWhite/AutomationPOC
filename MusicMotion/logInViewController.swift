@@ -27,6 +27,7 @@ class LogInViewController: UIViewController {
         //        password_input.text = "test"
         
         let preferences = UserDefaults.standard
+        print("\n--------> \(#function), session exists?: \(String(describing: preferences.object(forKey: "session"))) ")
         if preferences.object(forKey: "session") != nil
         {
             login_session = preferences.object(forKey: "session") as! String
@@ -41,21 +42,13 @@ class LogInViewController: UIViewController {
     }
     
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "GoToTabBarController"
-//        {
-//            print(#function)
-//            print()
-//        }
-//    }
-    
     
     @IBAction func DoLogin(_ sender: AnyObject) {
-        //        print(#function)
-        
         
         if ( login_button.titleLabel?.text == "Logout")
         {
+            print("\n------------------")
+            print(#function)
             let preferences = UserDefaults.standard
             preferences.removeObject(forKey: "session")
             
@@ -68,6 +61,8 @@ class LogInViewController: UIViewController {
     
     func login_now(username:String, password:String)
     {
+        print("\n------------------")
+        print(#function)
         let post_data: NSDictionary = NSMutableDictionary()
         
         post_data.setValue(username, forKey: "username")
@@ -143,12 +138,14 @@ class LogInViewController: UIViewController {
     
     func LoginDone()
     {
-        username_input.isEnabled = true
-        password_input.isEnabled = true
-        
-        login_button.isEnabled = true
-        
-        login_button.setTitle("Logout", for: .normal)
+        print("\n------------------")
+        print(#function)
+//        username_input.isEnabled = true
+//        password_input.isEnabled = true
+//        
+//        login_button.isEnabled = true
+//        
+//        login_button.setTitle("Logout", for: .normal)
         self.username_input.text = ""
         self.password_input.text = ""
          performSegue(withIdentifier: "GoToTabBarController", sender: nil)
@@ -158,6 +155,8 @@ class LogInViewController: UIViewController {
     
     func LoginToDo()
     {
+        print("\n------------------")
+        print(#function)
         username_input.isEnabled = true
         password_input.isEnabled = true
         
@@ -168,6 +167,8 @@ class LogInViewController: UIViewController {
     
     func check_session()
     {
+        print("\n------------------")
+        print(#function)
         let post_data: NSDictionary = NSMutableDictionary()
         
         
